@@ -1,0 +1,27 @@
+.text-field{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+form input{
+    padding: 1rem;
+    width: 30rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    
+}
+
+
+
+
+form label{
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    font-weight: bolder;
+    color: #4f16e0;
+    text-shadow: .1rem .1rem .5rem rgba(252, 249, 249, 0.403);
+ 
+
+}

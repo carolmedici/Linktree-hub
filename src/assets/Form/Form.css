@@ -1,0 +1,28 @@
+h2{
+    font-size: 1.8rem;
+    color: var(--title-color);
+    text-shadow: .1rem .1rem .5rem rgba(252, 249, 249, 0.403);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+.btnSubmit{
+    padding: .8rem 4rem;
+    margin-top: 2rem;
+    border-radius: 4rem;
+    border: none;
+    background-color: var(--background-btn);
+    color: white;
+    font-weight: bolder;
+    text-shadow: .1rem .1rem .5rem rgba(11, 11, 11, 0.438);
+}
+
+.btnSubmit:hover{
+    background-color: var(--hover-btn);
+    cursor: pointer;
+}
