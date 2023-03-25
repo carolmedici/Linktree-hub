@@ -12,8 +12,8 @@
 --background-color: #59C3C3 ;
 --input-color: #4f16e0; ;
 --input-back: #EBEBEB;
---links-color: #4062BB ;
---link-author: #646cff;
+--links-color: #7f40bb ;
+--link-hover: #646cff;
 --title-color: #9946a6;
 --background-btn: rgb(228, 200, 61);
 --hover-btn: rgb(61, 228, 70);
@@ -65,7 +65,7 @@ body {
 }
 
 h1{
-  margin: -5rem auto 5rem auto;
+  margin: 1rem auto 5rem auto;
   color: white;
   text-shadow: .1rem .1rem .5rem rgba(0, 0, 0, 0.64);
   font-size: 4rem;

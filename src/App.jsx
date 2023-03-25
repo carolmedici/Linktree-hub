@@ -9,10 +9,11 @@ function App() {
   
   
 
+  
   const [items, setItems] = useState([]);
   const [nextItemId, setNextItemId] = useState(1); 
-
- 
+  const [fullName, setCurrentFullName] = useState('');
+  const [showFullName, setShowFullName] = useState(false);
 
   const onItemAdd = (itemList) => {
     const newItem = { ...itemList, id: nextItemId };
@@ -20,38 +21,46 @@ function App() {
     setNextItemId(nextItemId + 1);
   };
 
-
-
-
-
- /* function handleRegisteredItem(itemData) {
-    const newItem = { id: nextItemId, ...itemData };
-    setItems([...items, newItem]);
-    setNextItemId(nextItemId + 1); // Atualiza nextItemId adicionando 1
+  const onFullNameChange = (fullName) => {
+    setCurrentFullName(fullName);
+    setShowFullName(true);
   }
-  console.log(items)*/
+
+  const onFormSubmit = (itemList) => {
+    if (itemList.fullName) {
+      setCurrentFullName(itemList.fullName);
+      setShowFullName(true);
+    }
+
+    onItemAdd(itemList);
+  };
+
   return (
     <div className="App">
       <h1>Linktree Hub</h1>
       <Photo />    
-      <FullName />
-      <Form forRegisteredItem={itemList => onItemAdd(itemList)} />
+      {showFullName && <FullName fullName={fullName}/>}
+  
+      <Link />
+      {items.map(item => (
+        <Link key={item.id} item={item} />
+      ))}
+      <Form forRegisteredItem={itemList => {
+        onFormSubmit(itemList);
+      }} />
+      <p className="madeBy">
+        by <a href="https://github.com/carolmedici">Carolina Médici</a>
+      </p>
+    </div>
+  );
+}
     
-      
-     <Link />
-     {items.map(item => (
-  <Link key={item.id} item={item} />
-))}
 
    
       
        <p className="madeBy">
           by <a href="https://github.com/carolmedici">Carolina Médici</a>
        </p>
-    </div>
-
     
-  )
-}
 
 export default App

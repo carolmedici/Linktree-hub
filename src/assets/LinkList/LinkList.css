@@ -1,5 +1,24 @@
 
+.container{
+    display: inline-block;
+}
 
 .Link-item{
-    width: 20rem;
+    
+    background-color: var(--links-color);
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    box-shadow: .1rem .1rem 1rem rgba(0, 0, 0, 0.414);
+    margin: 3rem;
+
+}
+
+.Link-item:hover{
+    background-color: var(--link-hover);
+}
+
+h3 a{
+    color: white;
+    text-shadow: .1rem .1rem .2rem rgba(0, 0, 0, 0.404);
+    font-size: 1.5rem;
 }

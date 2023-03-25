@@ -2,6 +2,7 @@ h2{
     font-size: 1.8rem;
     color: var(--title-color);
     text-shadow: .1rem .1rem .5rem rgba(252, 249, 249, 0.403);
+   
 }
 
 form {
@@ -9,6 +10,7 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 4rem;
   }
 
 .btnSubmit{

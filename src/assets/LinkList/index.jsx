@@ -8,12 +8,12 @@ const LinkList = ({ item }) => {
     return null;
   }
 
-  const { nameLink, url } = item;
+  const { nameLink, urlLink} = item;
 
   return (
-    <div className='Link-item'>
-      <h3>{nameLink}</h3>
-      <p>{url}</p>
+    <div className='container'>
+      <h3  className='Link-item'><a href={urlLink} target='_blank'>{nameLink}</a></h3>
+     
     </div>
   );
 };
