@@ -2,13 +2,17 @@ import TextField from '../TextField';
 import './Form.css'
 import React, { useState } from 'react';
 
-
-
-
 const Form = (props) =>{
     
     const [fullName, setFullName] = useState ('')
     const [nameLink, setnameLink] = useState ('')
+    const [LinkList, setLinkList] = useState('')
+
+    const newItem = {
+        nameLink: nameLink,
+        url: LinkList,
+      };
+      
     
 
 const onSave = (event) =>{
@@ -16,9 +20,11 @@ const onSave = (event) =>{
     props.forRegisteredItem({
         fullName,
         nameLink,
+        LinkList
     })
     setFullName('')
     setnameLink('')
+    setLinkList('')
 }
 
     return(
@@ -38,6 +44,14 @@ const onSave = (event) =>{
                 placeholder= 'Add the link name'
                 result = {nameLink}
                 toChange={result => setnameLink(result)}
+             
+                />
+                <TextField
+                obligatory={true}
+                label='Link'
+                placeholder= 'Insert the link to be customized'
+                result = {LinkList}
+                toChange={result => setLinkList(result)}
              
                 />
                 <button className='btnSubmit'>Submit</button>
