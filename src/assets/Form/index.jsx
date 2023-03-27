@@ -1,12 +1,14 @@
 import TextField from '../TextField';
 import './Form.css'
 import React, { useState } from 'react';
+import validUrl from 'valid-url'
 
 const Form = (props) =>{
     
     const [fullName, setFullName] = useState('')
     const [nameLink, setnameLink] = useState ('')
     const [urlLink, seturlLink] = useState('')
+    
 
     const newItem = {
         nameLink: nameLink,
@@ -14,17 +16,31 @@ const Form = (props) =>{
         fullName: fullName,
     };
 
-    const onSave = (event) =>{
-        event.preventDefault()
-        props.forRegisteredItem({
+    const onSave = (event) => {
+        event.preventDefault();
+        if (validateUrl(urlLink)) {
+          props.forRegisteredItem({
             fullName: fullName,
-            nameLink,
-            urlLink
-        })
-        setFullName('')
-        setnameLink('')
-        seturlLink('')
-    }
+            nameLink: nameLink,
+            urlLink: urlLink,
+          });
+          setFullName("");
+          setnameLink("");
+          seturlLink("");
+        } else {
+          alert("Invalid URL! Insert http://...");
+        }
+      };
+      
+
+    const validateUrl = (url) => {
+        if (validUrl.isUri(url)) {
+          return true;
+        } else {
+          return false;
+        }
+      };
+      
 
     return(
         <section className='form'>
@@ -55,6 +71,9 @@ const Form = (props) =>{
             </form>
         </section>
     );
+
+  
+
 }
 
 export default Form
