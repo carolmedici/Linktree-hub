@@ -65,11 +65,19 @@ body {
 }
 
 h1{
-  margin: 1rem auto 5rem auto;
+  margin: 1rem auto 0rem auto;
   color: white;
   text-shadow: .1rem .1rem .5rem rgba(0, 0, 0, 0.64);
   font-size: 4rem;
   
+}
+
+h2{
+  font-size: 1.8rem;
+  color: var(--title-color);
+  text-shadow: .1rem .1rem .5rem rgba(252, 249, 249, 0.403);
+  margin-bottom: 6rem;
+ 
 }
 
 .madeBy{

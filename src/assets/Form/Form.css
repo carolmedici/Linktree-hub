@@ -1,9 +1,4 @@
-h2{
-    font-size: 1.8rem;
-    color: var(--title-color);
-    text-shadow: .1rem .1rem .5rem rgba(252, 249, 249, 0.403);
-   
-}
+
 
 form {
     display: flex;

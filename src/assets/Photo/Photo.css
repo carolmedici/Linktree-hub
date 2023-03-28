@@ -3,3 +3,35 @@
     width: 20rem;
     margin-bottom: 2rem;
 }
+
+
+.profile-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto -3rem auto;
+    height: 100%;
+}
+      
+.photo-link {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: bolder;
+    color: var(--input-color);
+    text-shadow: .1rem .1rem .5rem rgba(252, 249, 249, 0.403);
+    position: relative;
+    left: -8.9rem;
+    top: 1.9rem;
+}
+      
+input {
+    padding: 1rem;
+    width: 30rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+

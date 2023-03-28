@@ -38,6 +38,7 @@ function App() {
   return (
     <div className="App">
       <h1>Linktree Hub</h1>
+      <h2>Fill in the data to create your Linktree</h2>
       <Photo />    
       {showFullName && <FullName fullName={fullName}/>}
   

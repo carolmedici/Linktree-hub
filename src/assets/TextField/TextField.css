@@ -10,8 +10,7 @@ form input{
     border: none;
     border-radius: 1rem;
     cursor: pointer;
-    
-}
+    }
 
 
 
@@ -20,8 +19,7 @@ form label{
     font-size: 1.5rem;
     margin-top: 2rem;
     font-weight: bolder;
-    color: #4f16e0;
+    color: var(--input-color);
     text-shadow: .1rem .1rem .5rem rgba(252, 249, 249, 0.403);
  
-
 }

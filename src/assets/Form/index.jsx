@@ -45,7 +45,9 @@ const Form = (props) =>{
     return(
         <section className='form'>
             <form onSubmit={onSave}>
-                <h2>Fill in the data to create your Linktree</h2>
+                
+
+                
                 <TextField
                     obligatory={false}
                     label='Full Name'
@@ -77,4 +79,3 @@ const Form = (props) =>{
 }
 
 export default Form
-
