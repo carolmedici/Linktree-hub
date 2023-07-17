@@ -10,7 +10,7 @@ function App() {
   const [nextItemId, setNextItemId] = useState(1); 
   const [fullName, setCurrentFullName] = useState('');
   const [showFullName, setShowFullName] = useState(false);
-  const [imageUrl, setImageUrl] = useState("https://media.licdn.com/dms/image/D4E35AQHSsKLT2zznSA/profile-framedphoto-shrink_400_400/0/1677771949323?e=1681304400&v=beta&t=wUq7jEW6GaieWPrf_Y5dVA3AiKoRk-eQYOcYQWcPblM");
+  const [imageUrl, setImageUrl] = useState("https://media.licdn.com/dms/image/D4E03AQF8o3S-nqh5CQ/profile-displayphoto-shrink_200_200/0/1677771943522?e=1695254400&v=beta&t=EpPi3Y0rU-d-mS7suflXnJZmTEtq0iVBqo-zPMQ2DYA");
 
   const onItemAdd = (itemList) => {
     const newItem = { ...itemList, id: nextItemId };
